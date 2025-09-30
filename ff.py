@@ -27,9 +27,10 @@ from telegram.ext import (
     ContextTypes,
     filters,
 )
+import os
 
 # ------------- CONFIG -------------
-BOT_TOKEN = "8361474378:AAEP-cPvtVuCcRwlCLPGjngQtFqSft96CH8"
+BOT_TOKEN = os.getenv("BOT_TOKEN")  # Read from environment
 DB_FILE = "group_mgr.db"
 DEFAULT_WARN_LIMIT = 3
 DEFAULT_WELCOME = "👋 <b>Welcome {mention}!</b>"
